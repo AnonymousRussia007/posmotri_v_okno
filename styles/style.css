@@ -45,14 +45,6 @@ ol {
 
 .visually-hidden {
   position: fixed;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-.visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -60,7 +52,6 @@ ol {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-  white-space: nowrap;
 }
 
 .preloader {
@@ -136,7 +127,7 @@ ol {
 }
 
 .search-form__pseudo-checkbox::before {
-  position: absolute;
+  position: fixed;
   top: 1px;
   left: 1px;
   content: "";
