@@ -9,7 +9,9 @@ html {
 }
 
 .page {
-  padding: 133px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -43,8 +45,12 @@ ol {
   list-style: none;
 }
 
+.content {
+  transform: translateY(-25px);
+}
+
 .visually-hidden {
-  position: fixed;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -124,10 +130,15 @@ ol {
   margin-right: 5px;
   border: 1px solid #fff;
   background-color: transparent;
+  transition: background-color 0.3s;
 }
 
+/* 
+Это первоначальный вариант с Абсолютом, но так как он не проходил по тестам его пришлось переписать.
+Подскажите можно ли использовать такой ход?
+Ничего лучше чем просто залить кнопку я не придумал.
 .search-form__pseudo-checkbox::before {
-  position: fixed;
+  position: absolute;
   top: 1px;
   left: 1px;
   content: "";
@@ -136,6 +147,14 @@ ol {
   background-color: #fff;
   transform: scale(0);
   transition: transform 0.3s;
+} */
+
+/* .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  transform: scale(1);
+} */
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  background-color: #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
