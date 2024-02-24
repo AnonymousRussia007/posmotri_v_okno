@@ -44,7 +44,6 @@ ol {
 }
 
 .visually-hidden {
-  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -55,7 +54,7 @@ ol {
 }
 
 .preloader {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -75,7 +74,7 @@ ol {
 }
 
 .error {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   inset: 0;
 }
