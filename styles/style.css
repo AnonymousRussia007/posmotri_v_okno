@@ -223,6 +223,10 @@ ol {
   scrollbar-width: none;
 }
 
+.content__list li:last-child {
+  padding: 2px 3px;
+}
+
 .content__list-item {
   padding: 0 3px;
 }
@@ -249,9 +253,10 @@ ol {
 }
 
 .content__video-card-description-container {
-  word-wrap: break-word;
+  width: 50%;
   margin-right: auto;
   padding: 2px;
+  overflow: hidden;
 }
 
 .content__video-card-title {
@@ -261,7 +266,9 @@ ol {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 6px;
-}
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
 
 .content__video-card-description {
   font-family: "Fira Sans Condensed", sans-serif;
@@ -274,12 +281,11 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 .more-button {
-  width: 100%;
-  margin-top: 2px;
-  width: 100%;
+  width: calc(100% - 4px);
 }
 
 .title {
@@ -327,5 +333,4 @@ ol {
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
-  margin: 2px;
 }
