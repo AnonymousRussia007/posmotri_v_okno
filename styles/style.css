@@ -326,4 +326,5 @@ ol {
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
+  margin: 2px;
 }
