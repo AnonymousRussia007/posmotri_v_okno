@@ -183,11 +183,8 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-color: #fff;
-}
-
-.search-form__label:active {
   outline: none;
+  border-color: #fff;
 }
 
 .search-form__textfield::placeholder,
@@ -326,5 +323,4 @@ ol {
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
-  margin: 2px;
 }
